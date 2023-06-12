@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Surpresa de Dia dos Namorados</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       background-image: url('wp4575207-4k-galaxy-wallpapers.jpg');
@@ -20,17 +21,17 @@
     }
 
     .heart {
-      width: 150px;
-      height: 150px;
+      width: 10vw;
+      height: 10vw;
       background-image: url('Picsart_23-06-11_01-48-28-771.png');
-      margin-top: 40px;
+      margin-top: 4vh;
       background-color: transparent;
       background-repeat: no-repeat;
       background-size: cover;
       border:none;
       cursor: pointer;
       position: absolute;
-      bottom:0;
+      bottom: 0;
       left: 50%;
       transform: translateX(-50%);
       z-index: 2;
@@ -72,12 +73,24 @@
       border: 1px solid white;
       top: 50%;
       left: 50%;
-      width: 50%;
+      width: 80vw;
       max-width: 800px;
       height: auto;
       object-fit: contain;
       transform: translate(-50%, -50%);
       z-index: 0;
+    }
+
+    @media only screen and (orientation: landscape) {
+      .heart {
+        width: 5vw;
+        height: 5vw;
+        margin-top: 2vh;
+      }
+
+      video {
+        width: 40vw;
+      }
     }
   </style>
 </head>
@@ -112,7 +125,7 @@
       curtainLeft.style.transform = 'translateX(100px)';
       curtainRight.style.transform = 'translateX(-100px)';
       var phone = '+5521977264306';
-      var message = "Amor, clica nesse link https://www.darksidebooks.com.br para escolher um livro qualquer pra você!"
+      var message = "Amor, clica nesse link https://www.darksidebooks.com.br para escolher um livro qualquer pra você! Te amo muito!"
       var wpplink = 'https://api.whatsapp.com/send?phone=' + phone + '&text=' + encodeURIComponent(message);
       
       setTimeout(function(){
